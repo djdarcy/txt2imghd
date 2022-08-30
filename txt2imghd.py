@@ -337,6 +337,13 @@ def main():
         default=10,
         help="unconditional guidance scale when detailing: eps = eps(x, empty) + scale * (eps(x, cond) - eps(x, empty))",
     )
+    parser.add_argument(
+        "--img",
+        type=str,
+        nargs="?",
+        default="",
+        help="Path to image to be processed",
+    )
     opt = parser.parse_args()
 
     if opt.prompt is None:
